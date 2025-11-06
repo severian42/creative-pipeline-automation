@@ -77,8 +77,6 @@ docker-compose logs -f
 docker-compose down
 ```
 
-See [DOCKER.md](./DOCKER.md) for detailed Docker documentation.
-
 ### Option 2: Local Installation with Python UV
 
 **Prerequisites:**
