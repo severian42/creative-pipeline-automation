@@ -332,7 +332,7 @@ The Creative Automation Pipeline is built as a modular, service-oriented archite
 ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐
 │ Gemini  │ │ Dropbox │ │ Gemini  │ │   PIL   │
 │  Flash  │ │   API   │ │ 2.5 Img │ │ Pillow  │
-│(Agentic)│ │  Local  │ │   API   │ │         │
+│         │ │  Local  │ │   API   │ │         │
 └─────────┘ └─────────┘ └─────────┘ └─────────┘
 ```
 
