@@ -87,7 +87,6 @@ docker-compose down
 
 ```bash
 git clone https://github.com/severian42/creative-pipeline-automation
-cd backend
 ```
 
 #### 2. Create Virtual Environment with UV
