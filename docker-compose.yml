@@ -1,0 +1,35 @@
+services:
+  creative-automation:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: creative-automation-pipeline
+    ports:
+      - "8000:8000"  # FastAPI backend
+      - "7860:7860"  # Gradio UI
+    environment:
+      # Required: Gemini API Key
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      
+      # Backend URL (for Gradio to connect to FastAPI)
+      - BACKEND_URL=http://localhost:8000
+      
+      # Optional: Dropbox credentials
+      - DROPBOX_REFRESH_TOKEN=${DROPBOX_REFRESH_TOKEN:-}
+      - DROPBOX_APP_KEY=${DROPBOX_APP_KEY:-}
+      - DROPBOX_APP_SECRET=${DROPBOX_APP_SECRET:-}
+    volumes:
+      # Mount assets and output directories for persistence
+      - ./assets:/app/assets
+      - ./output:/app/output
+      
+      # Optional: Mount .env file if you prefer
+      # - .env:/app/.env:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+

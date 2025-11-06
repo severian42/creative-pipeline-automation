@@ -1,0 +1,41 @@
+# Patagonia Q4 2025 Product Campaign
+# Example campaign brief for Creative Automation Pipeline
+
+campaign_id: "patagonia-q4-2025-launch"
+
+target_region: "Global (English)"
+
+target_audience: "Eco-conscious consumers, outdoor enthusiasts, and individuals (ages 25-55) who value quality, durability, and corporate responsibility."
+
+campaign_message: "Built to endure. Designed to be repaired. Better for our home planet."
+
+# Optional: Locale-specific configurations
+locales:
+  - language: "en"
+    region: "US"
+    message: "Built to endure. Designed to be repaired. Better for our home planet."
+  - language: "es"
+    region: "ES"
+    message: "Construido para durar. Diseñado para repararse. Mejor para nuestro planeta."
+  - language: "fr"
+    region: "FR"
+    message: "Conçu pour durer. Conçu pour être réparé. Meilleur pour notre planète."
+
+# Optional: A/B testing variants
+ab_testing:
+  enabled: true
+  variants:
+    - name: "variant_a"
+      message: "Built to endure. Designed to be repaired. Better for our home planet."
+    - name: "variant_b"
+      message: "Quality that lasts. Repair, don't replace. For a healthier planet."
+
+products:
+  - name: "Patagonia Better Sweater"
+    description: "A warm, low-bulk full-zip jacket made of 100% recycled polyester fleece. Fair Trade Certified™ sewn."
+    asset_filename: "patagonia_better_sweater"
+    
+  - name: "Patagonia Baggies Shorts"
+    description: "Durable, quick-drying shorts made from 100% recycled nylon with a DWR (durable water repellent) finish. Perfect for water and land."
+    asset_filename: "patagonia_baggies_shorts"
+

@@ -1,0 +1,22 @@
+# Web Frameworks
+fastapi
+uvicorn
+gradio
+gradio[mcp]
+
+# GenAI
+google-genai
+
+# Image Processing
+Pillow
+
+# Cloud Storage
+dropbox
+
+# Configuration & Data
+pyyaml
+python-dotenv
+pydantic
+
+# Utilities
+requests

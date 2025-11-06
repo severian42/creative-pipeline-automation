@@ -1,0 +1,12 @@
+# Invalid test campaign brief - missing required fields
+campaign_id: "test-campaign-invalid"
+
+target_region: "Test Region"
+
+# Missing target_audience
+# Missing campaign_message
+
+products:
+  - name: "Single Product"
+    description: "Only one product - should require at least 2"
+

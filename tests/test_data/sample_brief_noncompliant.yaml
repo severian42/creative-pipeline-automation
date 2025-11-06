@@ -1,0 +1,19 @@
+# Campaign brief with non-compliant message
+campaign_id: "test-campaign-noncompliant"
+
+target_region: "Global"
+
+target_audience: "General consumers"
+
+# This message contains forbidden terms and should fail compliance
+campaign_message: "BUY NOW! Limited time only! Guaranteed results or your money back!"
+
+products:
+  - name: "Test Product One"
+    description: "A test product"
+    asset_filename: "test_product_one"
+    
+  - name: "Test Product Two"
+    description: "Another test product"
+    asset_filename: "test_product_two"
+

@@ -1,0 +1,37 @@
+# Valid test campaign brief
+campaign_id: "test-campaign-001"
+
+target_region: "Global (English)"
+
+target_audience: "Test audience for automated testing"
+
+campaign_message: "Quality products built to last for our planet"
+
+locales:
+  - language: "en"
+    region: "US"
+    message: "Quality products built to last for our planet"
+  - language: "es"
+    region: "ES"
+    message: "Productos de calidad construidos para durar por nuestro planeta"
+  - language: "fr"
+    region: "FR"
+    message: "Produits de qualité conçus pour durer pour notre planète"
+
+ab_testing:
+  enabled: true
+  variants:
+    - name: "variant_a"
+      message: "Quality products built to last for our planet"
+    - name: "variant_b"
+      message: "Sustainable gear designed for durability"
+
+products:
+  - name: "Test Product One"
+    description: "A high-quality test product made from sustainable materials"
+    asset_filename: "test_product_one"
+    
+  - name: "Test Product Two"
+    description: "Another eco-friendly test product with excellent durability"
+    asset_filename: "test_product_two"
+
