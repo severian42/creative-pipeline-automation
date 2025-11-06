@@ -157,7 +157,7 @@ products:
 - `__init__(self)`:
   - Loads `.env` file using `dotenv.load_dotenv()`
   - Reads `GEMINI_API_KEY` (required, raises error if missing)
-  - Reads `DROPBOX_REFRESH_TOKEN` (optional)
+  - Reads `DROPBOX_ACCESS_TOKEN` (optional)
   - Reads `DROPBOX_APP_KEY` (optional)
   - Reads `DROPBOX_APP_SECRET` (optional)
   - Sets `DROPBOX_BASE_PATH = "/apps/creative_automation_poc"`
@@ -333,7 +333,7 @@ config = AppConfig()
 
 ### 4.5 `modules/compliance_agent.py`
 
-**Purpose:** Use Gemini Flash as agentic LLM to perform brand and legal compliance checks.
+**Purpose:** Use Gemini Flash LLM to perform brand and legal compliance checks.
 
 **Key Dependencies:** `google.genai`, `config`
 
@@ -757,3 +757,4 @@ Include the full Patagonia YAML example
 8. **Gradio UI** (gradio_ui.py)
 9. **Documentation** (README.md)
 10. **Testing** (manual workflow test with Patagonia brief)
+
