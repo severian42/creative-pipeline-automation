@@ -4,7 +4,7 @@
 
 **Project Context:** This POC Demo was created under a strict 3hr time limit to fit a 'deadline scenario' where the client needed a quick turn around to see that their brief and pain points could be addressed. The use of a coding assistant was very much a part of the process to ensure that the rapid prototype would be functional and demoed. You can see my planning and prompts in the `Plans_For_Assistant` folder to give more insight into how I approached this project under the deadline.
 
-All components are functional, yet not fully production ready. Tests currently pass the 80% coverage and functionality.
+All components are functional, yet not fully production ready. Tests currently pass the 80% coverage.
 
 ---
 
