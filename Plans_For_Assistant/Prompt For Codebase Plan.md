@@ -9,7 +9,7 @@
 1. **UI / Application Server:** **Gradio**. The app must run as a local Gradio web app. This will be the *only* interface. No separate FastAPI backend.  
 2. **Configuration Format:** **YAML**. All campaign briefs will be ingested as .yaml files, not .json.  
 3. **Dependency Management:** **Python UV**. The README.md must provide all setup and run instructions using uv.  
-4. **File Storage:** **Dropbox** (as the primary production-grade storage) with a **local filesystem fallback**. The app must check for a DROPBOX\_REFRESH\_TOKEN environment variable.  
+4. **File Storage:** **Dropbox** (as the primary production-grade storage) with a **local filesystem fallback**. The app must check for a DROPBOX\_ACCESS\_TOKEN environment variable.  
    * If the token is present, all asset lookups and final output uploads *must* go to a specified Dropbox folder (e.g., /apps/creative\_automation\_poc/).  
    * If the token is *missing*, the app must gracefully fall back to using local folders (e.g., ./assets/ for lookups, ./output/ for saves) and log a warning.  
 5. **Image Generation:** **gemini-2.5-flash-image**. This is the *only* model to be used for *new* asset generation. You must generate all three required aspect ratios.  
@@ -142,7 +142,7 @@ For *each* Python file (app.py, config.py, and all files in modules/), provide a
 * **Key Dependencies:** dropbox, os, pathlib, config  
 * **Class: StorageManager**  
   * \_\_init\_\_(self, config: AppConfig):  
-    * Tries to initialize dropbox.Dropbox(oauth2\_refresh\_token=...) using config.dropbox\_token.  
+    * Tries to initialize dropbox.Dropbox(oauth2\_access\_token=...) using config.dropbox\_token.  
     * Sets self.mode \= "dropbox" or self.mode \= "local" based on success.  
     * Initializes self.dbx client if successful.  
     * Logs a warning if falling back to local mode.  
@@ -200,7 +200,7 @@ Provide a complete, production-grade README.md file template. It must include:
   4. source .venv/bin/activate  
   5. uv pip install \-r requirements.txt (You'll need to list the requirements: gradio, google-genai, pyyaml, pillow, dropbox)  
   6. Create a .env file...  
-* **Configuration:** (Explain how to create .env from .env.example with GEMINI\_API\_KEY and DROPBOX\_REFRESH\_TOKEN).  
+* **Configuration:** (Explain how to create .env from .env.example with GEMINI\_API\_KEY and DROPBOX\_ACCESS\_TOKEN).  
 * **How to Run:**  
   1. source .venv/bin/activate  
   2. gradio app.py  
@@ -215,3 +215,4 @@ Provide a complete, production-grade README.md file template. It must include:
   * "Assumes assets are named according to asset\_filename in the brief."  
   * "Image generation is non-deterministic..."  
   * "Dropbox fallback to local storage is for demo robustness..."
+
