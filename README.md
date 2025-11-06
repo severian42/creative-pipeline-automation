@@ -367,7 +367,7 @@ The Creative Automation Pipeline is built as a modular, service-oriented archite
 
 **Endpoints:**
 - `POST /api/v1/campaigns/generate`: Initiates campaign generation (async)
-  - Accepts campaign brief JSON
+  - Accepts campaign brief
   - Optional query params: `locale`, `ab_variant`
   - Returns campaign ID for status tracking
   - Uses FastAPI `BackgroundTasks` for async processing
