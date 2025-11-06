@@ -496,7 +496,7 @@ The Creative Automation Pipeline is built as a modular, service-oriented archite
 
 **Dropbox Mode:**
 - Uses Dropbox SDK (`dropbox` package)
-- Supports both access token and refresh token authentication
+- Supports both access token and access token authentication
 - Creates folder structure: `/assets/` and `/output/`
 - Handles API errors gracefully with fallback
 
@@ -643,7 +643,7 @@ The `StorageManager` class:
 - Normalizes paths across storage systems
 - Handles errors gracefully with detailed logging
 
-### Agentic Compliance with Auto-Fix
+### LLM Compliance with Auto-Fix
 
 **Why use an LLM for compliance checking?**
 - **Flexibility:** Adapts to nuanced brand voice better than keyword matching
